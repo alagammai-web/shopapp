@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+    <div class="col-md-4 card" style="" *ngFor="let items of productslist" >
+        <h1>{{items.category}}</h1>
+        <div class="image">
+            <img class="card-img-top" src="{{items.image}}" alt="Card image cap">
+        </div>
+       
+        <div class="card-body">
+          <h5 class="card-title">{{items.title}}</h5>
+          <p class="card-text">{{items.description}}</p>
+        </div>
+        <div class="card-body link">
+          <a (click)="addtocart(items)" class="card-link">Add To Cart</a>
+        </div>
+      </div>
+    </div>
+    </div>
