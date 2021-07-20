@@ -29,7 +29,8 @@ export class ProductComponent implements OnInit {
 
 
   addtocart(items: any){
-            this.cartService.addtoCart(items);
+            this.cartService.addtoCart(items)
+            // window.location.reload();
   }
 
 

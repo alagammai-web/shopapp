@@ -11,7 +11,7 @@
 <input type="text" placeholder="Search Products">
     </div>
     <div class="col-md-3 text-right carticon">
-        <a routerLink="../cart"><i class="fa fa-shopping-cart"  aria-hidden="true"></i></a>
+        <a routerLink="../cart" (click)="cartpagerefresh()"><i class="fa fa-shopping-cart"  aria-hidden="true"></i></a>
 <span>{{cartvalue}}</span>
     </div>
 </div>

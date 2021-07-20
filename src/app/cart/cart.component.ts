@@ -10,37 +10,28 @@ export class CartComponent implements OnInit {
 
   rdata: any =[];
   listitems: any =[];
+  values:  any = [];
+  value2: any;
   constructor(private cartService: CartService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    // let products = [];
+    // window.location.reload();
+    this.values = localStorage.getItem('arr');
+    this.value2 = JSON.parse(this.values);
+    // this.value2.push(this.cartService.cartitems);
+    // localStorage.setItem('arr', JSON.stringify(this.value2));
+    // this.values = localStorage.getItem('arr');
+    // this.value2 = JSON.parse(this.values);
+    
+    console.log('mm', this.value2)
 
-    this.cartService.getCartProducts().subscribe((res: any)=>{
-     
-      this.listitems = res;
-
-
-      // localStorage.setItem("arr", JSON.stringify(this.listitems));
-      // var retrievedData: any = localStorage.getItem("arr");
-      // var movies2 = JSON.parse(retrievedData);
-      // console.log(movies2);
-
-    //   localStorage.setItem("arr", JSON.stringify(this.listitems));
-    //   var retrievedData: any = localStorage.getItem("arr");
-    // this.rdata = JSON.parse(retrievedData);
-   
-      
-
-
-    })
-
-   
-   
   }
 
   removeitem(item: any){
-this.cartService.removeCartItem(item);
+// this.cartService.removeCartItem("arr");
   }
-
+  
 
 
 
